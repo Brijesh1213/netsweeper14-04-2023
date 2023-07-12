@@ -8,6 +8,11 @@
           <include name="teardown"/>
           <include name="verifyHelpTextforAccountManageGroups"/>
           <include name="initialisation"/>
+          <include name="verifycreateAccount"/>
+          <include name="verifydeleteAccount"/>
+          <include name="verifyHelpTextforAccountList"/>
+          <include name="verifyHelpTextforAccountLockouts"/>
+          <include name="verifyHelpTextforAccountTemplates"/>
         </methods>
       </class> <!-- test.AccountsTest -->
     </classes>

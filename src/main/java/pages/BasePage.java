@@ -26,7 +26,7 @@ public WebDriverWait wait;
 public By sideBarList = By.xpath("//div[@class='widget stay-on-collapse']/nav/ul/li/a/span");
 public By tabsOnAccountPage = By.xpath("//div[@id='contentBody']/ul/li/a");
 //locator for clearing session
-public By preferenceTab = By.xpath("//nav[@role='navigation']/ul/li[7]/ul/li[1]");
+public By preferenceTab = By.xpath("//nav[@role='navigation']/ul/li[7]/ul/li[1]/a");
 public By clearSessionDataButton = By.xpath("//input[@value='Clear Session Data']");
 //public webelements
 public WebElement getSideBarList() {
@@ -154,7 +154,9 @@ public BasePage(WebDriver driver) {
 			if (finalSideBarValueToClick.isDisplayed()) {
 				finalSideBarValueToClick.click();
 			} else {
+				Thread.sleep(200);
 				getStringBasedElement(sideBarList, nameOfTabInSideBar).click();
+				Thread.sleep(300);
 				finalSideBarValueToClick.click();
 			}
 		} catch (Exception e) {
